@@ -1,0 +1,35 @@
+﻿<div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Import</h1>
+            </div>
+            <!-- /.col-lg-12 -->
+        </div>
+        <!-- /.row -->
+        <div class="row form-group">
+            <div class="col-md-6">
+                <input type="file" id="file1" name="file" ng-files="getTheFiles($files)" />
+            </div>
+            <div class="col-md-1">
+                <input type="button" ng-click="uploadFiles()" value="Upload" class="btn btn-primary" />
+            </div>
+            <div class="col-md-5"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <p ng-bind="jsondata"></p>
+            </div>
+        </div>
+    </div>
+    <!-- /.container-fluid -->
+</div>
+<script>
+    $(":file").filestyle(
+        {
+            buttonText: "Browse...",
+            buttonName: "btn-primary",
+            iconName: "fa fa-upload fa-fw",
+            placeholder: "Upload Revenueloss data"
+        });
+</script>

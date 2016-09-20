@@ -1,0 +1,76 @@
+﻿<div>
+    <div class="container-fluid">
+
+        <div class="row">
+            <br />
+            <div class="col-lg-12">
+                <!-- Nav tabs -->
+                <ul class="nav nav-pills">
+                    <li class="active">
+                        <a href="#HorizontalAccount" data-toggle="tab">
+                            <i class="fa fa-wrench fa-fw"></i> Horizontal / <i class="fa fa-sitemap fa-fw"></i> Account
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#MonthlyCumlative" data-toggle="tab"><i class="fa fa-calendar fa-fw"></i> Monthly Cumulative (Horizontal/Account)</a>
+                    </li>
+                </ul>
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div class="tab-pane fade in active" id="HorizontalAccount">
+                        <div class="row">
+                            <br />
+                            <div class="col-lg-6">
+                                <div>
+                                    <label class="label label-primary" style="padding:7px;">Overall Open Requirements Summary for 2016 (Includes future Pipeline requirements)</label>
+                                </div>
+                                <div>
+                                    <div ui-grid="openReqHorizontal" class="positiongrid"
+                                         ui-grid-resize-columns ui-grid-auto-resize ui-grid-pagination
+                                         ui-grid-selection style="height:435px;"></div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div>
+                                    <label class="label label-primary" style="padding:7px;">Overall Open Requirements Summary for 2016 (Includes future Pipeline requirements)</label>
+                                </div>
+                                <div>
+                                    <div ui-grid="openReqVertical" class="positiongrid"
+                                         ui-grid-resize-columns ui-grid-auto-resize ui-grid-pagination
+                                         ui-grid-selection style="height:315px;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="MonthlyCumlative">
+                        <div class="row">
+                            <br />
+                            <div class="col-lg-6">
+                                <div>
+                                    <label class="label label-primary" style="padding:7px;">Open Requirements Cumulative for 2016 (Includes future Pipeline requirements)</label>
+                                </div>
+                                <div>
+                                    <div ui-grid="openReqMonthlyHorz" class="positiongrid"
+                                         ui-grid-resize-columns ui-grid-auto-resize ui-grid-pagination
+                                         ui-grid-selection style="height:435px;"></div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div>
+                                    <label class="label label-primary" style="padding:7px;">Open Requirements Cumulative for 2016 (Includes future Pipeline requirements)</label>
+                                </div>
+                                <div>
+                                    <div ui-grid="openReqMonthlyVert" class="positiongrid"
+                                         ui-grid-resize-columns ui-grid-auto-resize ui-grid-pagination
+                                         ui-grid-selection style="height:315px;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- /.container-fluid -->
+</div>

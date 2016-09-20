@@ -1,0 +1,32 @@
+﻿<div class="navbar-default sidebar col-md-3" role="navigation" style="margin-top:0" ng-init="postRender()">
+    <div class="sidebar-nav navbar-collapse">
+        <ul class="nav" id="side-menu" ng-post-render>
+            <li class="sidebar-search">
+                <div class="input-group custom-search-form">
+                    <input type="text" class="form-control" placeholder="Asmt Year" ng-model="AsmtYear" title="Assessment Year">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="button" ng-click="SetAssessmentYear(AsmtYear)" ng-disabled="!AsmtYear">
+                            <i class="fa fa-save"></i> Set
+                        </button>
+                        <button class="btn btn-default" type="button" ng-disabled="true">{{stateAsmtYear}}</button>
+                    </span>
+                </div>
+                <!-- /input-group -->
+            </li>
+            <li ng-repeat="item in menu">
+                <a href="#" ng-click="Redirect(item.RelativeUrl, item.UrlParams)" ng-hide="item.SubPilotKitMenu.length">
+                    <i class="{{item.IconName}}"></i> {{item.Name}}
+                </a>
+                <a href="#" ng-click="Redirect(item.RelativeUrl, item.UrlParams)" ng-show="item.SubPilotKitMenu.length">
+                    <i class="{{item.IconName}}"></i> {{item.Name}}
+                    <span class="fa arrow"></span>
+                </a>
+                <ul class="nav nav-second-level" ng-show="item.SubPilotKitMenu.length">
+                    <li ng-repeat="subItem in item.SubPilotKitMenu">
+                        <a href="#" ng-click="Redirect(subItem.RelativeUrl, subItem.UrlParams)">{{subItem.Name}}</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>

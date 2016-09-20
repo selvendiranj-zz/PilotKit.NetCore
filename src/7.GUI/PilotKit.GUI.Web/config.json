@@ -1,0 +1,27 @@
+﻿{
+    "ApplicationInsights": {
+        "InstrumentationKey": ""
+    },
+    "AppSettings": {
+        "PackageSearchPattern": "PilotKit.",
+        "PackageLocalPath": "E:\\Workspace\\Repos\\PilotKit.NetCore\\src\\7.GUI\\PilotKit.GUI.Web\\bin",
+        "StaticViewPath": "E:\\Workspace\\Repos\\PilotKit.NetCore\\src\\7.GUI\\PilotKit.GUI.Web",
+        "ExcelConfigEndKey": "<End>",
+        "ExcelConfigEndKeyRow": "A:A",
+        "ExcelConfigEndKeyColumn": "A{0}:AZ{0}",
+        "ExcelStageLocation": "%USERPROFILE%\\RevenueLoss\\Stage",
+        "RevenueLossReportPath": "%USERPROFILE%\\RevenueLoss\\Reports",
+        "RevenueLossReportFileName": "RevenueLossReport_Canada_"
+    },
+    "ConnectionStrings": {
+        "PilotKit": "Server=HOME-PC;Database=PilotKit;Trusted_Connection=True;MultipleActiveResultSets=true"
+    },
+    "Logging": {
+        "IncludeScopes": false,
+        "LogLevel": {
+            "Default": "Debug",
+            "System": "Information",
+            "Microsoft": "Information"
+        }
+    }
+}

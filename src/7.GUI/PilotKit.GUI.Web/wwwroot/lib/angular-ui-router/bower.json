@@ -1,0 +1,9 @@
+{
+    "name": "angular-ui-router",
+    "version": "0.2.18",
+    "license": "MIT",
+    "main": "./angular-ui-router.js",
+    "ignore": [ ],
+    "dependencies": {
+    }
+}

@@ -1,0 +1,16 @@
+﻿{
+    "modules": [
+        {
+            "type": "PilotKit.Infrastructure.CrossCutting.AutofacModule, PilotKit.Infrastructure.CrossCutting"
+        },
+        {
+            "type": "PilotKit.Repository.DataAccess.AutofacModule, PilotKit.Repository.DataAccess"
+        },
+        {
+            "type": "PilotKit.Domain.Services.AutofacModule, PilotKit.Domain.Services"
+        },
+        {
+            "type": "PilotKit.Orchestration.Concrete.AutofacModule, PilotKit.Orchestration.Concrete"
+        }
+    ]
+}

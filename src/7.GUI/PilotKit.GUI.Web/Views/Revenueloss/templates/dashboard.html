@@ -1,0 +1,50 @@
+﻿<div>
+    <div class="container-fluid">
+        
+        <div class="row">
+            <br />
+            <div class="col-lg-12">
+                <!-- Nav tabs -->
+                <ul class="nav nav-pills">
+                    <li class="active">
+                        <a href="#HorizontalSummary" data-toggle="tab"><i class="fa fa-wrench fa-fw"></i> Horizontal</a>
+                    </li>
+                    <li>
+                        <a href="#AccountSummary" data-toggle="tab"><i class="fa fa-sitemap fa-fw"></i> Account</a>
+                    </li>
+                </ul>
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div class="tab-pane fade in active" id="HorizontalSummary">
+                        <div class="row">
+                            <br />
+                            <div class="col-lg-12">
+                                <label class="label label-primary" style="padding:7px;">Revenue Loss Summary (Horizontal)</label>
+                            </div>
+                            <div class="col-lg-12">
+                                <div ui-grid="summaryGridHorizontal" class="revenuelossgrid"
+                                     ui-grid-resize-columns ui-grid-auto-resize ui-grid-pagination
+                                     ui-grid-selection style="height:440px;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="AccountSummary">
+                        <div class="row">
+                            <br />
+                            <div class="col-lg-12">
+                                <label class="label label-primary" style="padding:7px;">Revenue Loss Summary (Account)</label>
+                            </div>
+                            <div class="col-lg-12">
+                                <div ui-grid="summaryGridVertical" class="revenuelossgrid"
+                                     ui-grid-resize-columns ui-grid-auto-resize ui-grid-pagination
+                                     ui-grid-selection style="height:440px;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- /.container-fluid -->
+</div>

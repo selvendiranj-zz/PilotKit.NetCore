@@ -1,0 +1,18 @@
+﻿{
+    "version": "1.0.0-*",
+
+    "dependencies": {
+        "Autofac": "4.0.0-rc2-240",
+        "Autofac.Configuration": "4.0.0-rc2-286",
+        "Autofac.Extensions.DependencyInjection": "4.0.0-rc2-240",
+        "PilotKit.Infrastructure.CrossCutting": "1.0.0-*",
+        "PilotKit.Domain.Interfaces": "1.0.0-*",
+        "PilotKit.Repository.Interfaces": "1.0.0-*"
+    },
+
+    "frameworks": {
+        "net452": {
+
+        }
+    }
+}

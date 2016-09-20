@@ -1,0 +1,20 @@
+﻿{
+    "version": "1.0.0-*",
+
+    "dependencies": {
+        "EPPlus": "4.1.0",
+        "log4net": "2.0.5"
+    },
+
+    "frameworks": {
+        "net452": {
+            "frameworkAssemblies": {
+                "System.Configuration": "4.0.0.0",
+                "System.Data": "4.0.0.0",
+                "System.Xml": "4.0.0.0",
+                "System.Xml.Serialization": "4.0.0.0",
+                "System.Drawing": "4.0.0.0"
+            }
+        }
+    }
+}

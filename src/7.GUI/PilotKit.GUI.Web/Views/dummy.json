@@ -1,0 +1,185 @@
+﻿[
+    {
+        "ID": 1,
+        "Name": "Summary",
+        "Description": "Summary",
+        "ParentId": 0,
+        "RelativeUrl": null,
+        "Role": null,
+        "Category": "RevenueLoss",
+        "SubPilotKitMenu": [
+            {
+                "ID": 8,
+                "Name": "Dashboard",
+                "Description": "Dashboard",
+                "ParentId": 1,
+                "RelativeUrl": null,
+                "Role": null,
+                "Category": "RevenueLoss",
+                "SubPilotKitMenu": [ ]
+            },
+            {
+                "ID": 9,
+                "Name": "TD Bank",
+                "Description": "TD Bank",
+                "ParentId": 1,
+                "RelativeUrl": null,
+                "Role": null,
+                "Category": "RevenueLoss",
+                "SubPilotKitMenu": [ ]
+            },
+            {
+                "ID": 10,
+                "Name": "RBC",
+                "Description": "RBC",
+                "ParentId": 1,
+                "RelativeUrl": null,
+                "Role": null,
+                "Category": "RevenueLoss",
+                "SubPilotKitMenu": [ ]
+            },
+            {
+                "ID": 11,
+                "Name": "Scotia",
+                "Description": "Scotia",
+                "ParentId": 1,
+                "RelativeUrl": null,
+                "Role": null,
+                "Category": "RevenueLoss",
+                "SubPilotKitMenu": [ ]
+            },
+            {
+                "ID": 12,
+                "Name": "CIBC",
+                "Description": "CIBC",
+                "ParentId": 1,
+                "RelativeUrl": null,
+                "Role": null,
+                "Category": "RevenueLoss",
+                "SubPilotKitMenu": [ ]
+            },
+            {
+                "ID": 13,
+                "Name": "BMO",
+                "Description": "BMO",
+                "ParentId": 1,
+                "RelativeUrl": null,
+                "Role": null,
+                "Category": "RevenueLoss",
+                "SubPilotKitMenu": [ ]
+            }
+        ]
+    },
+    {
+        "ID": 2,
+        "Name": "TDBank",
+        "Description": "TDBank",
+        "ParentId": 0,
+        "RelativeUrl": null,
+        "Role": null,
+        "Category": "RevenueLoss",
+        "SubPilotKitMenu": [
+            {
+                "ID": 14,
+                "Name": "Canada",
+                "Description": "Canada",
+                "ParentId": 2,
+                "RelativeUrl": null,
+                "Role": null,
+                "Category": "RevenueLoss",
+                "SubPilotKitMenu": [ ]
+            },
+            {
+                "ID": 15,
+                "Name": "US",
+                "Description": "US",
+                "ParentId": 2,
+                "RelativeUrl": null,
+                "Role": null,
+                "Category": "RevenueLoss",
+                "SubPilotKitMenu": [ ]
+            }
+        ]
+    },
+    {
+        "ID": 3,
+        "Name": "RBC",
+        "Description": "RBC",
+        "ParentId": 0,
+        "RelativeUrl": null,
+        "Role": null,
+        "Category": "RevenueLoss",
+        "SubPilotKitMenu": [
+            {
+                "ID": 16,
+                "Name": "Canada",
+                "Description": "Canada",
+                "ParentId": 3,
+                "RelativeUrl": null,
+                "Role": null,
+                "Category": "RevenueLoss",
+                "SubPilotKitMenu": [ ]
+            },
+            {
+                "ID": 17,
+                "Name": "US",
+                "Description": "US",
+                "ParentId": 3,
+                "RelativeUrl": null,
+                "Role": null,
+                "Category": "RevenueLoss",
+                "SubPilotKitMenu": [ ]
+            },
+            {
+                "ID": 18,
+                "Name": "UK",
+                "Description": "UK",
+                "ParentId": 3,
+                "RelativeUrl": null,
+                "Role": null,
+                "Category": "RevenueLoss",
+                "SubPilotKitMenu": [ ]
+            }
+        ]
+    },
+    {
+        "ID": 4,
+        "Name": "Scotia",
+        "Description": "Scotia",
+        "ParentId": 0,
+        "RelativeUrl": null,
+        "Role": null,
+        "Category": "RevenueLoss",
+        "SubPilotKitMenu": [ ]
+    },
+    {
+        "ID": 5,
+        "Name": "CIBC",
+        "Description": "CIBC",
+        "ParentId": 0,
+        "RelativeUrl": null,
+        "Role": null,
+        "Category": "RevenueLoss",
+        "SubPilotKitMenu": [ ]
+    },
+    {
+        "ID": 6,
+        "Name": "BMO",
+        "Description": "BMO",
+        "ParentId": 0,
+        "RelativeUrl": null,
+        "Role": null,
+        "Category": "RevenueLoss",
+        "SubPilotKitMenu": [ ]
+    },
+    {
+        "ID": 7,
+        "Name": "Import",
+        "Description": "Import",
+        "ParentId": 0,
+        "RelativeUrl": null,
+        "Role": null,
+        "Category": "RevenueLoss",
+        "SubPilotKitMenu": [ ]
+    }
+]

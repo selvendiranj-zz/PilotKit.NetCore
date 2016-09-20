@@ -1,0 +1,118 @@
+﻿<div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs">
+                    <li class="active">
+                        <a href="#RevenueLoss" data-toggle="tab">RevenueLoss</a>
+                    </li>
+                    <li>
+                        <a href="#Positions" data-toggle="tab">Positions</a>
+                    </li>
+                </ul>
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div class="tab-pane fade in active" id="RevenueLoss">
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-pills">
+                            <li class="active">
+                                <a href="#Overall" data-toggle="tab"><i class="fa fa-dollar fa-fw"></i> Overall</a>
+                            </li>
+                            <li ng-show="showCanada">
+                                <a href="#Canada" data-toggle="tab">CAD<i class="fa fa-dollar fa-fw"></i> Canada</a>
+                            </li>
+                            <li ng-show="showUS">
+                                <a href="#NorthAmerica" data-toggle="tab"><i class="fa fa-dollar fa-fw"></i> North America</a>
+                            </li>
+                            <li ng-show="showUK">
+                                <a href="#Europe" data-toggle="tab"><i class="fa fa-gbp fa-fw"></i> Europe</a>
+                            </li>
+                        </ul>
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <div class="tab-pane fade in active" id="Overall">
+                                <div class="row">
+                                    <br />
+                                    <div class="col-lg-12">
+                                        <label class="label label-primary" style="padding:7px;">Overall Revenue Loss ({{regions}})</label>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div ui-grid="summaryGrid" class="revenuelossgrid"
+                                             ui-grid-resize-columns ui-grid-auto-resize ui-grid-pagination
+                                             ui-grid-selection style="height:435px;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="Canada">
+                                <div class="row" ng-show="showCanada">
+                                    <br />
+                                    <div class="col-lg-12">
+                                        <label class="label label-primary" style="padding:7px;">Canada Region</label>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div ui-grid="summaryDetailGridCanada" class="revenuelossgrid"
+                                             ui-grid-resize-columns ui-grid-auto-resize ui-grid-pagination
+                                             ui-grid-selection style="height:455px;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="NorthAmerica">
+                                <div class="row" ng-show="showUS">
+                                    <br />
+                                    <div class="col-lg-12">
+                                        <label class="label label-primary" style="padding:7px;">North America Region</label>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div ui-grid="summaryDetailGridUS" class="revenuelossgrid"
+                                             ui-grid-resize-columns ui-grid-auto-resize ui-grid-pagination
+                                             ui-grid-selection style="height:455px;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="Europe">
+                                <div class="row" ng-show="showUK">
+                                    <br />
+                                    <div class="col-lg-12">
+                                        <label class="label label-primary" style="padding:7px;">Europe Region</label>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div ui-grid="summaryDetailGridUK" class="revenuelossgrid"
+                                             ui-grid-resize-columns ui-grid-auto-resize ui-grid-pagination
+                                             ui-grid-selection style="height:455px;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="Positions">
+                        <div class="row">
+                            <br />
+                            <div class="col-lg-6">
+                                <div>
+                                    <label class="label label-primary" style="padding:7px;">Resource Count (Canada + others)</label>
+                                </div>
+                                <div>
+                                    <div ui-grid="openReqHorizontal" class="positiongrid"
+                                         ui-grid-resize-columns ui-grid-auto-resize ui-grid-pagination
+                                         ui-grid-selection style="height:435px;"></div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div>
+                                    <label class="label label-primary" style="padding:7px;">Open Requirements Cumulative for 2016</label>
+                                </div>
+                                <div>
+                                    <div ui-grid="openReqMonthlyHorz" class="positiongrid"
+                                         ui-grid-resize-columns ui-grid-auto-resize ui-grid-pagination
+                                         ui-grid-selection style="height:435px;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.container-fluid -->
+</div>
