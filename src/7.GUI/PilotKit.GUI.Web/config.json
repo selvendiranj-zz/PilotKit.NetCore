@@ -4,8 +4,9 @@
     },
     "AppSettings": {
         "PackageSearchPattern": "PilotKit.",
-        "PackageLocalPath": "E:\\Workspace\\Repos\\PilotKit.NetCore\\src\\7.GUI\\PilotKit.GUI.Web\\bin",
-        "StaticViewPath": "E:\\Workspace\\Repos\\PilotKit.NetCore\\src\\7.GUI\\PilotKit.GUI.Web",
+        "RepoRoot":"D:\\Workspace\\PilotKit.NetCore",
+        "PackageLocalPath": "src\\7.GUI\\PilotKit.GUI.Web\\bin",
+        "StaticViewPath": "src\\7.GUI\\PilotKit.GUI.Web",
         "ExcelConfigEndKey": "<End>",
         "ExcelConfigEndKeyRow": "A:A",
         "ExcelConfigEndKeyColumn": "A{0}:AZ{0}",
