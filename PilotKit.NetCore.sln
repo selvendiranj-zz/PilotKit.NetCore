@@ -1,12 +1,14 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{600F9C01-3B75-469E-88C9-DE24B7B46092}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{350FB843-89F8-47F8-BBA2-4C82BDC683F9}"
 	ProjectSection(SolutionItems) = preProject
+		1.Restore.bat = 1.Restore.bat
+		2.Pack.bat = 2.Pack.bat
 		global.json = global.json
 		solution items\readme.txt = solution items\readme.txt
 	EndProjectSection
