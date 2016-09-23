@@ -37,8 +37,7 @@ namespace PilotKit.Web.App_Start
 
         public ContainerBuilder RegisterDependencies(ContainerBuilder builder)
         {
-            var path = AppSettings.PackageLocalPath +
-                ((AppSettings.PackageLocalPath.Contains(".dnx")) ? @"\" + AppSettings.PackageSearchPattern : @"\");
+            var path = Path.Combine(AppSettings.RepoRoot, AppSettings.PackageLocalPath) + @"\";
             var searchPattern = AppSettings.PackageSearchPattern + "*.dll";
 
             // The commented assemblies are already loaded into AppDomain from project.json

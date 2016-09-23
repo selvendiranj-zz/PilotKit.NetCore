@@ -20,6 +20,7 @@ using Microsoft.AspNetCore.Mvc.Authorization;
 using Microsoft.AspNetCore.Authorization;
 using Autofac.Extensions.DependencyInjection;
 using Microsoft.Extensions.FileProviders;
+using System.IO;
 
 namespace PilotKit.GUI.Web
 {
@@ -163,7 +164,7 @@ namespace PilotKit.GUI.Web
             app.UseApplicationInsightsExceptionTelemetry();
 
             //app.UseStaticFiles();
-            staticViewPath = AppSettings.StaticViewPath;
+            staticViewPath = Path.Combine(AppSettings.RepoRoot, AppSettings.StaticViewPath);
             app.UseStaticFiles(new StaticFileOptions()
             {
                 FileProvider = new PhysicalFileProvider(staticViewPath),

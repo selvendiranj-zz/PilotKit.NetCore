@@ -4,7 +4,7 @@
     },
     "AppSettings": {
         "PackageSearchPattern": "PilotKit.",
-        "RepoRoot":"D:\\Workspace\\PilotKit.NetCore",
+        "RepoRoot": "E:\\Workspace\\Repos\\PilotKit.NetCore",
         "PackageLocalPath": "src\\7.GUI\\PilotKit.GUI.Web\\bin",
         "StaticViewPath": "src\\7.GUI\\PilotKit.GUI.Web",
         "ExcelConfigEndKey": "<End>",
