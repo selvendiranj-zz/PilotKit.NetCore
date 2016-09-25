@@ -2,11 +2,11 @@
     "projects": [
         "src",
         "test",
-        "src/Infrastructure",
-        "src/Repository",
-        "src/Domain",
-        "src/Orchestration",
-        "src/GUI"
+        "src/8.Infrastructure",
+        "src/4.Repository",
+        "src/5.Domain",
+        "src/6.Orchestration",
+        "src/7.GUI"
     ],
     "sdk": {
         "version": "1.0.0-preview2-003131"
