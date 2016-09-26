@@ -1069,7 +1069,7 @@ $(function() {
                 min: 0
             }, {
                 // align if we are to the right
-                alignTicksWithAxis: position == "right" ? 1 : null,
+                alignTicksWithAxis: position === "right" ? 1 : null,
                 position: position,
                 tickFormatter: euroFormatter
             }],

@@ -111,8 +111,8 @@ namespace PilotKit.Infrastructure.CrossCutting.ExcelImport
 
             int endRow;
             int endColumn;
-            int headerRow = 2;
-            int dataStartRow = 3;
+            int headerRow = 1;
+            int dataStartRow = 2;
             int dataStartColumn = 1;
             string colName;
 

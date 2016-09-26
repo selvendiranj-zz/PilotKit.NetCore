@@ -6,7 +6,7 @@ $(function (ns)
     {
         var factory = {};
 
-        factory.uploadFiles = function ()
+        factory.uploadFiles = function (formdata)
         {
             var request = {
                 method: 'POST',

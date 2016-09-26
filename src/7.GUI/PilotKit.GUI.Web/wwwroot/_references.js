@@ -40,5 +40,6 @@
 /// <reference path="lib/metismenu/dist/metisMenu.js" />
 /// <reference path="lib/mocha/mocha.js" />
 /// <reference path="lib/morrisjs/morris.js" />
+/// <reference path="lib/ng-file-upload/ng-file-upload.js" />
 /// <reference path="lib/raphael/raphael.js" />
 /// <reference path="lib/raphael/raphael.min.js" />

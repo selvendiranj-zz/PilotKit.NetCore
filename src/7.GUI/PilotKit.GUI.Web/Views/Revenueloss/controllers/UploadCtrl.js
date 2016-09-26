@@ -17,7 +17,7 @@ $(function (ns)
         // upload the files
         $scope.uploadFiles = function ()
         {
-            RVLFactory.uploadFiles().then(function (data)
+            RVLFactory.uploadFiles(formdata).then(function (data)
             {
                 $scope.jsondata = data;
             });
