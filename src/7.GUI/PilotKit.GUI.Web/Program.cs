@@ -18,7 +18,6 @@ namespace PilotKit.GUI.Web
                 .UseIISIntegration()
                 .UseStartup<Startup>()
                 .Build();
-            host.Run();
 
             host.Run();
         }

@@ -97,7 +97,7 @@ namespace PilotKit.Orchestration.Concrete.RevenueLoss
 
         public string ExportSummaryToExcel()
         {
-            string level;
+            // string level = "Horizontal";
 
             string vertical;
             string country;
@@ -107,7 +107,7 @@ namespace PilotKit.Orchestration.Concrete.RevenueLoss
             string fileName = AppSettings.RevenueLossReportFileName + abbMonth + "_" + date + ".xlsx";
             ExcelPackage pack = CreateExcel(fileName);
             CreateWorksheets(pack);
-            level = "Horizontal";
+            
             country = null;
             vertical = null;
 
@@ -160,7 +160,8 @@ namespace PilotKit.Orchestration.Concrete.RevenueLoss
 
         private void GetOverallRevLossSummary(string vertical, ExcelPackage pack)
         {
-            string country = null;
+            // string country = null;
+
             if (vertical == null || vertical.Equals("null")) vertical = null;
             Clear(dtRevenueLossOverall);
             revenueLossOverall = this.service.GetRevenueLossSummary(vertical);

@@ -187,9 +187,10 @@ namespace PilotKit.GUI.Web
             {
                 // routes.MapRoute(name: "default", template: "{controller=Home}/{action=Index}/{id?}");
                 routes.MapRoute(name: "default", template: "{controller=Layout}/{action=Index}/{id?}");
+                routes.MapRoute("defaultApi", "api/{controller}/{action=Index}/{id?}");
                 // routes.MapWebApiRoute("defaultApi", "api/{controller}/{action=Index}/{id?}");
                 // 404 routing, or otherwise routing logic, if route is not found go Home
-                // routes.MapRoute("spa-fallback", "{*anything}", new { controller = "Layout", action = "Index" });
+                routes.MapRoute("spa-fallback", "{*anything}", new { controller = "Layout", action = "Index" });
             });
         }
     }

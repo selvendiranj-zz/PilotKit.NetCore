@@ -4,8 +4,8 @@
     },
     "AppSettings": {
         "PackageSearchPattern": "PilotKit.",
-        "RepoRoot": "E:\\Workspace\\Repos\\PilotKit.NetCore",
-        "PackageLocalPath": "src\\7.GUI\\PilotKit.GUI.Web\\bin",
+        "RepoRoot": "D:\\Workspace\\PilotKit.NetCore",
+        "PackageLocalPath": "src\\7.GUI\\PilotKit.GUI.Web\\bin\\Debug\\net452\\win7-x64",
         "StaticViewPath": "src\\7.GUI\\PilotKit.GUI.Web",
         "ExcelConfigEndKey": "<End>",
         "ExcelConfigEndKeyRow": "A:A",
@@ -15,7 +15,7 @@
         "RevenueLossReportFileName": "RevenueLossReport_Canada_"
     },
     "ConnectionStrings": {
-        "PilotKit": "Server=HOME-PC;Database=PilotKit;Trusted_Connection=True;MultipleActiveResultSets=true"
+        "PilotKit": "Server=PC314610;Database=PilotKit;Trusted_Connection=True;MultipleActiveResultSets=true"
     },
     "Logging": {
         "IncludeScopes": false,
