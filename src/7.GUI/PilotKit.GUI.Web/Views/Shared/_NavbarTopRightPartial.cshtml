@@ -4,6 +4,7 @@
 
     @if (User.Identity.IsAuthenticated)
     {
+        @Html.AntiForgeryToken()
         <li><a href="/manage/index" title="Manage">Hello @User.Identity.Name!</a></li>
 
         <li><a href="/account/logoff" title="Log off">Log off</a></li>

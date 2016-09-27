@@ -9,7 +9,7 @@
     promanApp.config(config);
     promanApp.run(run);
     promanApp.run(refreshState);
-    
+
     function config($stateProvider, $urlRouterProvider, $locationProvider) {
         $urlRouterProvider.otherwise('/');
         $stateProvider
@@ -34,14 +34,41 @@
                     'sideview@': { templateUrl: '../../views/pages/sidemenu.html', controller: '' }
                 }
             })
+            .state('account', {
+                abstract: true,
+                views: {
+                    '@': { template: '<ui-view />', controller: '' },
+                    'sideview@': { templateUrl: '../../views/home/sidemenu.html', controller: '' }
+                }
+            })
+            .state('manage', {
+                abstract: true,
+                views: {
+                    '@': { template: '<ui-view />', controller: '' },
+                    'sideview@': { templateUrl: '../../views/home/sidemenu.html', controller: '' }
+                }
+            })
 
             .state('home.index', { parent: 'home', url: '/', templateUrl: '/home/index', controller: '' })
             .state('home.about', { parent: 'home', url: '/home/about', templateUrl: '/home/about', controller: '' })
             .state('home.contact', { parent: 'home', url: '/home/contact', templateUrl: '/home/contact', controller: '' })
 
-            //.state('/account/register', { url: '/account/register', templateUrl: '/account/register', controller: '' })
-            //.state('/account/login', { url: '/account/login', templateUrl: '/account/login', controller: '' })
-            //.state('/account/logoff', { url: '/account/logoff', templateUrl: '/account/logoff', controller: '' })
+            .state('account.register', { parent: 'account', url: '/account/register', templateUrl: '/account/register', controller: '' })
+            .state('account.login', { parent: 'account', url: '/account/login', templateUrl: '/account/login', controller: '' })
+            .state('account.logoff', {
+                parent: 'account', url: '/account/logoff',
+                templateProvider: ['$stateParams', '$http', function ($stateParams, $http) {
+                    var token = angular.element('input[name="__RequestVerificationToken"]').attr('value');
+                    return $http({
+                        method: 'POST', url: '/Account/LogOff', headers: { 'RequestVerificationToken': token }
+                    }).then(function (response) { return response.data; });
+                }],
+                onExit: ['$location', function ($location) {
+                    window.location.reload();
+                    //$state.go($state.current, {}, { reload: true });
+                }]
+            })
+            .state('manage.index', { parent: 'manage', url: '/manage/index', templateUrl: '/manage/index', controller: '' })
 
             .state('revenueloss.error', { parent: 'revenueloss', url: '/error', templateUrl: '/layout/error', controller: '' })
             .state('revenueloss.index', { parent: 'revenueloss', url: '/revenueloss', templateUrl: '../../views/revenueloss/templates/dashboard.html', controller: 'Revenueloss.Controllers.DashboardCtrl' })

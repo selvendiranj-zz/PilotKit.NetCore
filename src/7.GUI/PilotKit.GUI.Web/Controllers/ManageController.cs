@@ -52,7 +52,7 @@ namespace aspnetcore.Controllers
             var user = await GetCurrentUserAsync();
             if (user == null)
             {
-                return View("Error");
+                return PartialView("Error");
             }
             var model = new IndexViewModel
             {
@@ -62,7 +62,7 @@ namespace aspnetcore.Controllers
                 Logins = await _userManager.GetLoginsAsync(user),
                 BrowserRemembered = await _signInManager.IsTwoFactorClientRememberedAsync(user)
             };
-            return View(model);
+            return PartialView(model);
         }
 
         //
