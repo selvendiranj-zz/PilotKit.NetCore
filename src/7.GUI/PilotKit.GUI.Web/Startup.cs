@@ -35,7 +35,6 @@ namespace PilotKit.GUI.Web
         {
             var builder = new ConfigurationBuilder()
                 .SetBasePath(env.ContentRootPath)
-                .AddJsonFile("hosting.json", optional: true)
                 .AddJsonFile("config.json", optional: true, reloadOnChange: true)
                 .AddJsonFile($"config.{env.EnvironmentName}.json", optional: true);
 
@@ -160,7 +159,7 @@ namespace PilotKit.GUI.Web
             }
 
             app.ApplicationServices.GetRequiredService<IIocConfig>().InitializeAppConstants();
-            
+
             app.UseApplicationInsightsExceptionTelemetry();
 
             //app.UseStaticFiles();
@@ -174,7 +173,7 @@ namespace PilotKit.GUI.Web
             app.UseIdentity();
 
             // Add external authentication middleware below. To configure them please see http://go.microsoft.com/fwlink/?LinkID=532715
-            
+
             // If we're self-hosting, enable integrated authentication (if we're using
             // IIS, this will be done at the IIS configuration level).
             //var listener = app.ServerFeatures.Get<WebListener>();
