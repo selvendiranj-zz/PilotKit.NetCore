@@ -1,6 +1,10 @@
-﻿
+﻿@using System.Security.Claims
+
 <ul class="nav navbar-top-links navbar-left">
-    <li><a href="/">Home</a></li>
-    <li><a href="/revenueloss">Revenue Loss</a></li>
-    <li><a href="/pages">Pages</a></li>
+    @if (User.Identity.IsAuthenticated)
+    {
+        <li><a href="/">Home</a></li>
+        <li><a href="/revenueloss">Revenue Loss</a></li>
+        <li><a href="/pages">Pages</a></li>
+    }
 </ul>

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 
 namespace PilotKit.Web.Controllers
 {
@@ -28,6 +29,12 @@ namespace PilotKit.Web.Controllers
         }
 
         public IActionResult Error()
+        {
+            return PartialView();
+        }
+
+        [AllowAnonymous]
+        public IActionResult SideMenu()
         {
             return PartialView();
         }

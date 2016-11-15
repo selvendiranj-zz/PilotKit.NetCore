@@ -17,7 +17,7 @@
                 abstract: true,
                 views: {
                     '@': { template: '<ui-view />', controller: '' },
-                    'sideview@': { templateUrl: '../../views/home/sidemenu.html', controller: '' }
+                    'sideview@': { templateUrl: '/home/sidemenu', controller: '' }
                 }
             })
             .state('revenueloss', {
@@ -126,8 +126,7 @@
         });
 
         $rootScope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParam) {
-            if (toState === 'account.logoff')
-            {
+            if (toState === 'account.logoff') {
                 window.location.reload();
             }
         });
