@@ -64,6 +64,9 @@
                     }).then(function (response) { return response.data; });
                 }],
                 onExit: ['$location', function ($location) {
+                    //$state.transitionTo($state.current, $stateParams, {
+                    //    reload: true, inherit: false, notify: true
+                    //});
                     window.location.reload();
                     //$state.go($state.current, {}, { reload: true });
                 }]
@@ -120,6 +123,13 @@
             //}
             var currentPageTemplate = toState.templateUrl;
             $templateCache.remove(currentPageTemplate);
+        });
+
+        $rootScope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParam) {
+            if (toState === 'account.logoff')
+            {
+                window.location.reload();
+            }
         });
     }
 
