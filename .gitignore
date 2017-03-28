@@ -243,3 +243,6 @@ ModelManifest.xml
 
 # FAKE - F# Make
 .fake/
+/.vscode/launch.json
+/.vscode/tasks.json
+/src/7.GUI/PilotKit.GUI.Web/wwwroot/dist
