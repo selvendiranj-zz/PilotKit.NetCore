@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net452</TargetFramework>
+    <AssemblyName>PilotKit.Domain.Services</AssemblyName>
+    <PackageId>PilotKit.Domain.Services</PackageId>
+    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\8.Infrastructure\PilotKit.Infrastructure.CrossCutting\PilotKit.Infrastructure.CrossCutting.csproj" />
+    <ProjectReference Include="..\PilotKit.Domain.Interfaces\PilotKit.Domain.Interfaces.csproj" />
+    <ProjectReference Include="..\..\4.Repository\PilotKit.Repository.Interfaces\PilotKit.Repository.Interfaces.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="4.0.0-rc2-240" />
+    <PackageReference Include="Autofac.Configuration" Version="4.0.0-rc2-286" />
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="4.0.0-rc2-240" />
+  </ItemGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net452' ">
+    <Reference Include="System" />
+    <Reference Include="Microsoft.CSharp" />
+  </ItemGroup>
+
+</Project>
