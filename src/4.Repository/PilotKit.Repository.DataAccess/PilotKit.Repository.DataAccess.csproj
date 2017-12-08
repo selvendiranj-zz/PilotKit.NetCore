@@ -1,31 +1,35 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net452</TargetFramework>
-    <AssemblyName>PilotKit.Repository.DataAccess</AssemblyName>
-    <PackageId>PilotKit.Repository.DataAccess</PackageId>
-    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
-    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
-    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
-  </PropertyGroup>
+    <PropertyGroup>
+        <TargetFramework>net461</TargetFramework>
+        <AssemblyName>PilotKit.Repository.DataAccess</AssemblyName>
+        <PackageId>PilotKit.Repository.DataAccess</PackageId>
+        <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+        <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+        <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+    </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\..\8.Infrastructure\PilotKit.Infrastructure.CrossCutting\PilotKit.Infrastructure.CrossCutting.csproj" />
-    <ProjectReference Include="..\PilotKit.Repository.Interfaces\PilotKit.Repository.Interfaces.csproj" />
-  </ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\..\8.Infrastructure\PilotKit.Infrastructure.CrossCutting\PilotKit.Infrastructure.CrossCutting.csproj" />
+        <ProjectReference Include="..\PilotKit.Repository.Interfaces\PilotKit.Repository.Interfaces.csproj" />
+    </ItemGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Autofac" Version="4.0.0-rc2-240" />
-    <PackageReference Include="Autofac.Configuration" Version="4.0.0-rc2-286" />
-    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="4.0.0-rc2-240" />
-    <PackageReference Include="Insight.Database" Version="5.2.7" />
-    <PackageReference Include="Insight.Database.Core" Version="5.2.7" />
-  </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="Autofac" Version="4.0.0-rc2-240" />
+        <PackageReference Include="Autofac.Configuration" Version="4.0.0-rc2-286" />
+        <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="4.0.0-rc2-240" />
+        <PackageReference Include="Insight.Database" Version="5.2.7" />
+        <PackageReference Include="Insight.Database.Core" Version="5.2.7" />
+    </ItemGroup>
 
-  <ItemGroup Condition=" '$(TargetFramework)' == 'net452' ">
-    <Reference Include="System.Data" />
-    <Reference Include="System" />
-    <Reference Include="Microsoft.CSharp" />
-  </ItemGroup>
+    <ItemGroup Condition=" '$(TargetFramework)' == 'net452' ">
+        <Reference Include="System.Data" />
+        <Reference Include="System" />
+        <Reference Include="Microsoft.CSharp" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <Reference Include="System.Configuration" />
+    </ItemGroup>
 
 </Project>

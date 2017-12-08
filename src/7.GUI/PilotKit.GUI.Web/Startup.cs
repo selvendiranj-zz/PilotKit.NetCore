@@ -4,7 +4,6 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -14,13 +13,13 @@ using PilotKit.GUI.Web.Models;
 using PilotKit.GUI.Web.Services;
 using Autofac;
 using PilotKit.Web.App_Start;
-using Microsoft.Extensions.PlatformAbstractions;
 using PilotKit.Infrastructure.CrossCutting.Constants;
 using Microsoft.AspNetCore.Mvc.Authorization;
 using Microsoft.AspNetCore.Authorization;
 using Autofac.Extensions.DependencyInjection;
 using Microsoft.Extensions.FileProviders;
 using System.IO;
+using Microsoft.AspNetCore.Identity;
 
 namespace PilotKit.GUI.Web
 {
@@ -33,6 +32,7 @@ namespace PilotKit.GUI.Web
 
         public Startup(IHostingEnvironment env)
         {
+            string userSecretId = "PilotKit.NetCore.userSecretId";
             var builder = new ConfigurationBuilder()
                 .SetBasePath(env.ContentRootPath)
                 .AddJsonFile("config.json", optional: true, reloadOnChange: true)
@@ -41,10 +41,10 @@ namespace PilotKit.GUI.Web
             if (env.IsDevelopment())
             {
                 // For more details on using the user secret store see http://go.microsoft.com/fwlink/?LinkID=532709
-                builder.AddUserSecrets();
+                builder.AddUserSecrets(userSecretId);
 
                 // This will push telemetry data through Application Insights pipeline faster, allowing you to view results immediately.
-                builder.AddApplicationInsightsSettings(developerMode: true);
+                // builder.AddApplicationInsightsSettings(developerMode: true);
             }
 
             builder.AddEnvironmentVariables();
@@ -61,8 +61,8 @@ namespace PilotKit.GUI.Web
             // services.AddGlimpse();
 
             // Add framework services.
-            services.AddApplicationInsightsTelemetry(Configuration);
-
+            // services.AddApplicationInsightsTelemetry(Configuration);
+            
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("PilotKit")));
 
@@ -136,7 +136,7 @@ namespace PilotKit.GUI.Web
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
 
-            app.UseApplicationInsightsRequestTelemetry();
+            // app.UseApplicationInsightsRequestTelemetry();
 
             if (env.IsDevelopment())
             {
@@ -160,7 +160,7 @@ namespace PilotKit.GUI.Web
 
             app.ApplicationServices.GetRequiredService<IIocConfig>().InitializeAppConstants();
 
-            app.UseApplicationInsightsExceptionTelemetry();
+            // app.UseApplicationInsightsExceptionTelemetry();
 
             //app.UseStaticFiles();
             staticViewPath = Path.Combine(AppSettings.RepoRoot, AppSettings.StaticViewPath);
@@ -170,7 +170,7 @@ namespace PilotKit.GUI.Web
                 //RequestPath = new PathString("/StaticFiles")
             });
 
-            app.UseIdentity();
+            app.UseAuthentication();
 
             // Add external authentication middleware below. To configure them please see http://go.microsoft.com/fwlink/?LinkID=532715
 

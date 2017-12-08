@@ -11,7 +11,6 @@ using PilotKit.Orchestration.Interfaces.RevenueLoss;
 using PilotKit.Orchestration.Interfaces.Common;
 using PilotKit.Domain.Model.RevenueLoss;
 using System.IO;
-using Microsoft.AspNetCore.Razor.CodeGenerators;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading;
 using PilotKit.Infrastructure.CrossCutting.Extensions;
@@ -60,7 +59,7 @@ namespace PilotKit.Web.ApiControllers
 
             foreach (IFormFile file in files)
             {
-                var filename = ContentDispositionHeaderValue.Parse(file.ContentDisposition).FileName.Trim('"');
+                var filename = ContentDispositionHeaderValue.Parse(file.ContentDisposition).FileName.Trim().ToString();
                 filename = AppSettings.ExcelStageLocation + $@"\{filename}";
                 size += file.Length;
                 await file.SaveAsAsync(filename);

@@ -10,7 +10,6 @@ using System.Reflection;
 using System.Threading.Tasks;
 //using Microsoft.Dnx.Runtime;
 using PilotKit.Infrastructure.CrossCutting.Constants;
-using Microsoft.Extensions.PlatformAbstractions;
 using Microsoft.Extensions.Configuration;
 using Autofac.Configuration;
 using PilotKit.Infrastructure.CrossCutting.Utilities;
